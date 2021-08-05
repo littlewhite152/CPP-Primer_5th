@@ -11,7 +11,7 @@
             "program": "C:\\Windows\\system32\\cmd.exe",
             "args": ["/C","${fileDirname}\\${fileBasenameNoExtension}.exe","&","pause"],
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",
+            "cwd": "D:\\mingw64\\bin",
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
