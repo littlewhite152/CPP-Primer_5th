@@ -40,7 +40,9 @@
         "xutility": "cpp",
         "fstream": "cpp",
         "string": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "*.tcc": "cpp",
+        "sstream": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
