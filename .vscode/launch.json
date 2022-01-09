@@ -8,7 +8,7 @@
             "name": "Debug",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",// 调试可执行文件的全局路径
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -23,7 +23,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "c/cpp task"
+            "preLaunchTask": "c/cpp task"// 在调试之前进行task
         },
         {
             "name": "(gdb) 启动",

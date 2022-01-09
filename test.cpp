@@ -9,16 +9,8 @@
 // #include<numeric>
 // using namespace std;
 // int main(){
-    
+
 // }
-
-
-
-
-
-
-
-
 
 // #include<iostream>
 // #include<forward_list>
@@ -30,7 +22,6 @@
 //         fl.push_front(val);
 //     }
 // }
-
 
 // #include<iostream>
 // #include<vector>
@@ -56,7 +47,6 @@
 //     }
 // }
 
-
 // #include<iostream>
 // #include<vector>
 // #include<iterator>
@@ -75,8 +65,6 @@
 //     }
 // }
 
-
-
 // #include<iostream>
 // #include<vector>
 // #include<iterator>
@@ -91,7 +79,6 @@
 //     cout << *v.end();
 //     cout << *(v.end().base());
 // }
-
 
 // #include<iostream>
 // #include<vector>
@@ -113,20 +100,18 @@
 //     }
 // }
 
-
-
 // #include<iostream>
 // #include<vector>
 // using namespace std;
 // int main(){
-//     int numRows = 5; 
+//     int numRows = 5;
 //     vector<vector<int>> v;
 //     for(int i = 0 ;i < numRows; ++ i){
 //         vector<int> temp(i + 1, 1);
 //         if(i > 1){
 //             for(int j = 1; j < temp.size() - 1; ++ j){
 //                 if(i > 1){
-//                     temp[j] = v[i - 1][j - 1] + v[i - 1][j]; 
+//                     temp[j] = v[i - 1][j - 1] + v[i - 1][j];
 //                 }
 //             }
 //         }
@@ -139,7 +124,6 @@
 //     }
 
 // }
-
 
 // #include<iostream>
 // #include<map>
@@ -160,8 +144,6 @@
 //     for(auto i : m)
 //         cout << i.first << ' ' << i.second << endl;
 // }
-
-
 
 // #include<iostream>
 // #include<map>
@@ -197,7 +179,7 @@
 //     auto item = m.find(s);
 //     auto count = m.count(s);
 //     while(count){
-//         cout << 
+//         cout <<
 //     }
 // }
 
@@ -227,8 +209,6 @@
 //     cout << max;
 // }
 
-
-
 // #include<iostream>
 // #include<memory>
 // using namespace std;
@@ -241,14 +221,12 @@
 //     cout << *p << endl;
 // }
 
-
 // #include<iostream>
 // using namespace std;
 // int main(){
 //     int i = 0;
 //     cout << (0 << i) << endl;
 // }
-
 
 // #include<iostream>
 // #include<memory>
@@ -260,8 +238,6 @@
 //     auto *q = new auto{'a', 'b', 'c'};
 //     cout << *q << endl;
 // }
-
-
 
 // #include<iostream>
 // #include<vector>
@@ -280,7 +256,6 @@
 //     for(auto i : c)
 //         cout << i << endl;
 // }
-
 
 // //华为消毒液和工位
 // #include<iostream>
@@ -326,7 +301,6 @@
 //     cout << *max_element(min.begin(), min.end());
 // }
 
-
 // #include<iostream>
 // using namespace std;
 // int main(){
@@ -350,7 +324,6 @@
 //     cout << (uint32_t)res << endl;
 // }
 
-
 // #include<iostream>
 // using namespace std;
 // class A{
@@ -370,9 +343,8 @@
 //     cout << aa.val << endl;
 
 //     A aaa = a;
-    
-// }
 
+// }
 
 // #include<iostream>
 // #include<vector>
@@ -392,7 +364,6 @@
 //     cout << ()
 // }
 
-
 // #include<iostream>
 // #include<iterator>
 // using namespace std;
@@ -400,7 +371,6 @@
 //     istream_iterator<int> in(cin), eos;
 //     cout << "请输入:" << endl;
 // }
-
 
 // // 分糖果问题leecode 135
 // #include<iostream>
@@ -463,8 +433,6 @@
 //     cout << s.candy(ratings);
 // }
 
-
-
 // #include<iostream>
 // using namespace std;
 // int main(){
@@ -472,9 +440,6 @@
 //     i a = 1;
 //     cout << a;
 // }
-
-
-
 
 // #include<iostream>
 // #include<vector>
@@ -512,7 +477,7 @@
 //                             n -= cnt / 2 - 1;
 //                         else
 //                             n -= cnt / 2;
-//                     }                    
+//                     }
 //                 }
 //                 cout << "n : " << n << endl;
 //                 cnt = 0;
@@ -529,9 +494,6 @@
 //     Solution s;
 //     cout << s.canPlaceFlowers(v,1);
 // }
-
-
-
 
 // #include<iostream>
 // #include<vector>
@@ -556,9 +518,6 @@
 //     cout << s.checkPossibility(v);
 // }
 
-
-
-
 // #include<iostream>
 // using namespace std;
 // class A{
@@ -577,41 +536,118 @@
 //     (*a)();
 // }
 
+// #include<iostream>
+// using namespace std;
+// class A{
+// public:
+//     A(){
+//         cout << "调用了构造函数！" << endl;
+//     };
+//     virtual void fun(int i = 0){
+//         cout << "调用了基类的fun函数,i=" << i <<  endl;
+//     };
+//     void operator() (){
+//         cout << "调用了()运算符！" << endl;
+//     };
+// };
 
-#include<iostream>
-using namespace std;
-class A{
-public:
-    A(){
-        cout << "调用了构造函数！" << endl;
-    };
-    virtual void fun(int i = 0){
-        cout << "调用了基类的fun函数,i=" << i <<  endl;
-    };
-    void operator() (){
-        cout << "调用了()运算符！" << endl;
-    };
-};
+// class B : public A{
+// public:
+//     B(){
+//         cout << "调用了b的构造函数" << endl;
+//     };
+//     void fun(int i = 1){
+//         cout << "调用了派生类的fun函数,i=" << i <<  endl;
+//     };
+// };
+// int main(){
+//     A a;
+//     B b;
+//     A *pa = &a, *pb = &b;
+//     b.fun();
+//     pa -> fun();// 基类的fun函数
+//     pb -> fun();// 派生类的fun函数
 
-class B : public A{
-public:
-    B(){
-        cout << "调用了b的构造函数" << endl;
-    };
-    void fun(int i = 1){
-        cout << "调用了派生类的fun函数,i=" << i <<  endl;
-    };
-};
-int main(){
-    A a;
-    B b;
-    A *pa = &a, *pb = &b;
-    b.fun();
-    pa -> fun();// 基类的fun函数
-    pb -> fun();// 派生类的fun函数
+//     // B *qa = &a;// 出错
+//     B *qb = &b;
+//     // qa -> fun();// 出错
+//     qb -> fun();// 派生类的fun函数
+// }
 
-    // B *qa = &a;// 出错
-    B *qb = &b;
-    // qa -> fun();// 出错
-    qb -> fun();// 派生类的fun函数
-}
+// #include<iostream>
+// using namespace std;
+// class A{
+//     public:
+//         void operator()(const int a) const{
+//             cout << "调用了（）函数";
+//         }
+// };
+// int main(){
+//     A a;
+//     a(1);
+// }
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int main(){
+//     int n = 5;
+//     vector<int> v(n, 0);
+//     v[0] = 0;
+//     v[1] = 1;
+//     for(int i = 2; i <= n; ++ i){
+//         v[i] = v[i - 1] + v[i - 2];
+//         cout << v[i] << endl;
+//     }
+//     return v[n];
+// }
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     const int a = 3;
+//     int b = 4;
+
+//     int temp = 100;
+//     int *t = &temp;
+    
+//     const int *p = &a; //指针常量
+//     p = &b; //可以改变指向
+//     p = t; //可以改变指向
+//     // *p = temp; 因为*p是const类型，所以不能改变它的值
+
+//     int* const q = &b;
+//     // int * const q = &a; a是const，而*q时int类型，不能转换
+//     // q = &temp; 不能改变q的值，即指向
+//     // q = t;同上
+//     *q = temp; //可以改变指向的值
+// }
+
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int main(){
+//     int i = 97;
+//     cout << char(i) << endl;
+
+//     char j = ' ';
+//     cout << int(j) << endl;
+
+//     vector<int> v(j);
+//     cout << v.size() << endl;
+// }
+
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int a[10];
+//     int *p = &a[0];
+//     int temp[10];
+//     cout << "数组名a：" << a << endl;
+//     cout << "指向数组a第一个元素的指针值p：" << p << endl;
+
+//     cout << "a ++ 之后：" << ++ a << endl;
+//     cout << "p ++ 之后：" << ++ p << endl;
+// }
