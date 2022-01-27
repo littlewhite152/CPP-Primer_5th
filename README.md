@@ -14,3 +14,9 @@ it main(){
 
 ---
 ***
+
+
+[id]: http:://baidu.com "baidu"
+this is my [test][id] link
+
+![tupian](2008_007189.jpg "tupian")

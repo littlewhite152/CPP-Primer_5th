@@ -642,12 +642,199 @@
 // #include<iostream>
 // using namespace std;
 // int main(){
-//     int a[10];
+//     int a[2] = {1, 2};
 //     int *p = &a[0];
-//     int temp[10];
+//     int temp[2] = {3, 4};
+//     cout << "数组a里的元素：" << endl;
+//     for(auto i : a){
+//         cout << i << endl;
+//     }
+//     cout << "数组名temp:" << temp << endl;
 //     cout << "数组名a：" << a << endl;
 //     cout << "指向数组a第一个元素的指针值p：" << p << endl;
 
-//     cout << "a ++ 之后：" << ++ a << endl;
+//     *a = *temp; // 这里改变的是a数组中第一个元素的值
+//     // cout << "a ++ 之后：" << ++ a << endl;// 报错，因为a是常量指针，不能改变地址值
+//     cout << "数组a里的元素：" << endl;
+//     for(auto i : a){
+//         cout << i << endl;
+//     }
+//     cout << "数组名a：" << a << endl;
 //     cout << "p ++ 之后：" << ++ p << endl;
+//     cout << "p ++ 之后所指向的值：" << *p << endl;// p指针可以后移到数组下一个元素
 // }
+
+
+
+// // 测试大小端存储
+// #include<iostream>
+// using namespace std;
+// // 使用联合体
+// union endian{
+//     int a;
+//     char ch;
+// };
+// int main(){
+//     // 使用类型转换
+//     int a = 0x1234;
+//     cout << a << endl;
+
+//     char c = (char)(a);
+//     cout << c << endl;
+
+//     if(c == 0x12){
+//         cout << "大端存储" << endl;
+//     }
+//     if(c == 0x34){
+//         cout << "小端存储" << endl;
+//     }
+
+//     endian value;
+//     value.a = 0x1234;
+//     if(value.ch == 0x12){
+//         cout << "大端" << endl;
+//     }
+//     if(value.ch == 0x34){
+//         cout << "小端" << endl;
+//     }
+// }
+
+
+// #include<iostream>
+// using namespace std;
+// class A{
+//     public:
+//         virtual int fun(int a = 10){
+//             cout << a << endl;
+//             return a;
+//         }
+// };
+
+// class B : A{
+//     public:
+//         int fun(int b = 5){
+//             cout << b << endl;
+//             // return b + 'a';
+//         }
+// };
+
+// int main(){
+//     B b;
+//     b.fun(10);
+// }
+
+
+// #include<iostream>
+// using namespace std;
+// class A{
+//     private:
+//         int a;
+//         const int b = 2;
+//     public:
+//         const void fun(int temp){
+//             cout << "访问到了A的static类型的fun函数" << endl;
+//         }
+// }
+// int main() {
+//     A a;
+
+// }
+
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     // int a = 1;
+//     // int b = a;
+//     // cout << &a << endl;
+//     // cout << &b << endl;
+
+
+//     int a = 2;
+//     int *p = &a;
+//     cout << &a << endl;
+//     cout << p << endl;
+//     cout << &p << endl;
+// }
+
+
+// #include<iostream>
+// using namespace std;
+// class A{
+//     public:
+//         const int const_val = 1;
+//         int normal_val = 2;
+//         void const_fun() const{
+//             cout << "访问了const函数" << endl;
+//         }
+//         void normal_fun(){
+//             cout << "访问了普通函数" << endl;
+//         }
+// };
+// int main(){
+//     const A const_a;
+//     A normal_a;
+
+//     const_a.const_fun();
+//     cout << const_a.const_val << endl;
+//     // const_a.normal_fun();
+//     cout << const_a.normal_val << endl;
+
+//     normal_a.const_fun();
+//     cout << normal_a.const_val << endl;
+//     normal_a.normal_fun();
+//     cout <<normal_a.normal_val << endl;
+
+//     // const_a.const_val = 2;
+//     // const_a.normal_val = 3;
+//     // normal_a.const_val = 4;
+//     normal_a.normal_val = 5;
+// }
+
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int a = 5;
+//     int &b = a;
+//     cout << &a << endl;
+//     cout << &b << endl;
+
+//     cout << a << endl;
+//     cout << b << endl;
+// }
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a = 1;
+    int &b = a;
+    int temp = 2;
+
+    cout << a << endl;
+    cout << b << endl;
+
+    cout << &a << endl;
+    cout << &b << endl;
+
+    int *p = &a;
+    int *q = &b;
+
+    *p = temp;
+    
+    cout << p << endl;
+    cout << q << endl;
+
+    cout << *p << endl;
+    cout << *q << endl;
+
+    p ++;
+    q ++;
+
+    cout << p << endl;
+    cout << q << endl;
+
+    cout << *p << endl;
+    cout << *q << endl;
+}
